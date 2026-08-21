@@ -1,0 +1,28 @@
+{
+  "name": "orangehrm-automation",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript automation suite for OrangeHRM OpenSource Demo",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:login": "playwright test tests/login.spec.ts",
+    "test:dashboard": "playwright test tests/dashboard.spec.ts",
+    "test:admin": "playwright test tests/admin.spec.ts",
+    "test:pim": "playwright test tests/pim.spec.ts",
+    "test:leave": "playwright test tests/leave.spec.ts",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index",
+    "install:browsers": "playwright install --with-deps"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.7.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.6.0"
+  }
+}
