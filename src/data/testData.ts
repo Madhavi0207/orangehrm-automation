@@ -9,20 +9,7 @@ export const credentials = {
   },
 };
 
-export const dashboardModules = [
-  "Admin",
-  "PIM",
-  "Leave",
-  "Time",
-  "Recruitment",
-  "My Info",
-  "Performance",
-  "Dashboard",
-  "Directory",
-  "Maintenance",
-  "Claim",
-  "Buzz",
-];
+export const dashboardModules = ["Admin"];
 
 export function uniqueSuffix(): string {
   return Date.now().toString().slice(-6);
@@ -35,15 +22,3 @@ export const newUser = () => ({
   username: `testuser_${uniqueSuffix()}`,
   password: "TestPass@123",
 });
-
-export const newEmployee = () => ({
-  firstName: "Automation",
-  middleName: "QA",
-  lastName: `Tester${uniqueSuffix()}`,
-});
-
-export const leaveRequest = {
-  leaveType: "CAN - Vacation",
-  fromDate: "2026-09-01",
-  toDate: "2026-09-02",
-};
