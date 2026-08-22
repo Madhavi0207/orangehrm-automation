@@ -17,23 +17,23 @@ built with **Playwright + TypeScript** using the **Page Object Model (POM)**.
 
 ```
 orangehrm-automation/
-├── playwright.config.ts        # Playwright runner config (projects, timeouts, reporters)
+├── playwright.config.ts
 ├── package.json
 ├── package-lock.json
 ├── tsconfig.json
-├── .env.example                 # copy to .env and fill in credentials
+├── .env.example
 ├── .gitignore
-├── .github/workflows/playwright.yml   # CI pipeline (currently commented out, see below)
+├── .github/workflows/playwright.yml
 ├── src/
-│   ├── pages/                   # Page Object Model
-│   │   ├── BasePage.ts          # shared helpers: spinner wait, toast, logout
+│   ├── pages/
+│   │   ├── BasePage.ts
 │   │   ├── LoginPage.ts
 │   │   ├── DashboardPage.ts
 │   │   └── AdminPage.ts
 │   ├── data/
-│   │   └── testData.ts          # credentials, fixtures data, generators
+│   │   └── testData.ts
 │   └── utils/
-│       └── fixtures.ts          # custom Playwright fixtures (loginPage, dashboardPage, adminPage, loggedInPage)
+│       └── fixtures.ts
 └── tests/
     ├── login.spec.ts
     └── user.spec.ts
