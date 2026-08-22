@@ -10,8 +10,6 @@
     "test:login": "playwright test tests/login.spec.ts",
     "test:dashboard": "playwright test tests/dashboard.spec.ts",
     "test:admin": "playwright test tests/admin.spec.ts",
-    "test:pim": "playwright test tests/pim.spec.ts",
-    "test:leave": "playwright test tests/leave.spec.ts",
     "test:chromium": "playwright test --project=chromium",
     "test:firefox": "playwright test --project=firefox",
     "test:webkit": "playwright test --project=webkit",
