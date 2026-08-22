@@ -178,16 +178,12 @@ export class AdminPage {
     });
   }
 
-  // ============================================================
   // NAVIGATION
-  // ============================================================
   async goToAdminPage(): Promise<void> {
     await this.adminLink.click();
   }
 
-  // ============================================================
   // USER MANAGEMENT  (/admin/viewSystemUsers)
-  // ============================================================
   async addUser({
     username,
     password,
@@ -203,18 +199,15 @@ export class AdminPage {
     await this.userRoleOption.click();
 
     // Employee Name
-    // Employee Name
     await this.employeeNameHint.click();
     await this.employeeNameHint.pressSequentially("Charles Carter", {
       delay: 150,
     });
 
-    // Wait for the "Searching...." text to disappear AND a real option to appear
     const option = this.employeeName;
     await option.waitFor({ state: "visible", timeout: 10_000 });
     await option.click();
 
-    // Confirm it actually got selected (no "Invalid" text)
     await expect(
       this.page.locator(".oxd-input-field-error-message"),
     ).toHaveCount(0);

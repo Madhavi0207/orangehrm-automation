@@ -17,9 +17,7 @@ test.describe("Admin - User Management", () => {
     await expect(admin.assertingAdminPage).toBeVisible();
   });
 
-  // ============================================================
   // ADD USER
-  // ============================================================
 
   test("should add a new system user", async ({ page }) => {
     const admin = new AdminPage(page);
@@ -34,9 +32,7 @@ test.describe("Admin - User Management", () => {
     );
   });
 
-  // ============================================================
   // SEARCH EXISTING USER
-  // ============================================================
 
   test("should search by their username", async ({ page }) => {
     const admin = new AdminPage(page);
@@ -68,9 +64,7 @@ test.describe("Admin - User Management", () => {
     expect(count).toBeGreaterThanOrEqual(0);
   });
 
-  // ============================================================
   // SEARCH NON-EXISTING USER
-  // ============================================================
 
   test("should show no records for a non-existent user", async ({ page }) => {
     const admin = new AdminPage(page);
@@ -80,9 +74,7 @@ test.describe("Admin - User Management", () => {
     await admin.expectNoRecords();
   });
 
-  // ============================================================
   // DELETE USER
-  // ============================================================
 
   test("should delete a user", async ({ page }) => {
     const admin = new AdminPage(page);
